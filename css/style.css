@@ -35,6 +35,12 @@ body {
 a:-webkit-any-link {
     color: var(--soft-black);
     cursor: pointer;
+    text-decoration: none;
+}
+
+a:-webkit-any-link:hover {
+    color: var(--gold);
+    font-weight: bold;
 }
 
 /* Elegant Scrollbar */

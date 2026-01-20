@@ -12,6 +12,18 @@ const CONFIG = {
   }
 };
 
+
+/* ============================================
+   Thank you note
+   ============================================ */
+
+function showThankYou() {
+  setTimeout(() => {
+    document.querySelector('.rsvp-form').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  }, 500);
+}
+
 /* ============================================
    COUNTDOWN TIMER
    ============================================ */
@@ -100,25 +112,22 @@ function initSmoothScroll() {
 /* ============================================
    FORM HANDLING
    ============================================ */
-function initFormHandling() {
-  const form = document.querySelector('.rsvp-form');
-  
-  if (!form) return;
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    console.log('RSVP Submitted:', data);
-    
-    // Show success message
-    alert('Thank you for your RSVP! We can\'t wait to celebrate with you.');
-    form.reset();
-  });
-}
+//function initFormHandling() {
+//  const form = document.querySelector('.rsvp-form');
+//
+//  if (!form) return;
+//
+//  form.addEventListener('submit', function(e) {
+//    e.preventDefault();
+//
+//    // Get form data
+//    const formData = new FormData(form);
+//    const data = Object.fromEntries(formData);
+//
+//    console.log('RSVP Submitted:', data);
+//    form.reset();
+//  });
+//}
 
 /* ============================================
    INITIALIZE ON DOM LOAD

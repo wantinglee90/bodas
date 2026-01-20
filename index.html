@@ -8,7 +8,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Allura&family=Calligraffitti&&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Allura&family=Calligraffitti&display=block" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -108,7 +108,7 @@
         </p>
       </div>
       <div class="detail-card fade-in">
-        <div class="detail-icon">✦</div>
+        <div class="detail-icon">⌘</div>
         <h3 class="detail-title">Reception</h3>
         <p class="detail-info">
           Details to come
@@ -117,7 +117,7 @@
         </p>
       </div>
       <div class="detail-card fade-in">
-        <div class="detail-icon">❋</div>
+        <div class="detail-icon">⑅</div>
         <h3 class="detail-title">Dress Code</h3>
         <p class="detail-info">
           Black Tie Optional
@@ -191,22 +191,24 @@
         </p>
       </div>
       <div class="detail-card fade-in">
-        <div class="detail-icon">♢</div>
+        <div class="detail-icon">⌯</div>
         <h3 class="detail-title">Neighborhoods</h3>
         <p class="detail-info">
-          The venue is located in <a href="">Centro Historico</a>. This area is home to museums, cathedral and other national monuments.<br>
-          Other neighborhoods we would suggest include:<br>
-          - <a href="">Roma Norte</a> (trendy neighborhood with loads of food and shopping options)<br>
-          - <a href="">Polanco</a> (close to upscale boutiques)
+          The venue is located in <a href="https://en.wikipedia.org/wiki/Historic_center_of_Mexico_City" target="_blank" rel="noopener noreferrer">Centro Historico</a>; a UNESCO World Heritage site - home to museums and other attractions.<br>
+          Other neighborhoods we recommend include:<br>
+          - <a href="https://en.wikipedia.org/wiki/Colonia_Roma" target="_blank" rel="noopener noreferrer">Roma Norte</a> (trendy neighborhood with plenty of food and shopping options. ~25min drive to venue)<br>
+          - <a href="https://en.wikipedia.org/wiki/Condesa" target="_blank" rel="noopener noreferrer">Condesa</a> (charming and quaint neighborhood. ~35min drive to venue)<br>
+          - <a href="https://en.wikipedia.org/wiki/Polanco" target="_blank" rel="noopener noreferrer">Polanco</a> (close to upscale boutiques. ~45min drive to venue)
         </p>
       </div>
       <div class="detail-card fade-in">
         <div class="detail-icon">♢</div>
         <h3 class="detail-title">Getting Around</h3>
         <p class="detail-info">
-          We suggest using <a href="">Uber</a> or <a href="">Didi</a> app to get around.<br>
-          Ps: Rates on Didi is 80% of the time cheaper than Uber.<br>
-          Also, allow for some travel time as traffic can be unpredictable.
+          We suggest using <a href="https://www.uber.com/us/en/download/" target="_blank" rel="noopener noreferrer">Uber</a> or <a href="https://web.didiglobal.com/" target="_blank" rel="noopener noreferrer">Didi</a> app to get around.<br>
+          Rates on Didi are usually cheaper than Uber.<br>
+          Please allow adequate time for travel as traffic can be unpredictable.
+<!--          ❋-->
         </p>
       </div>
     </div>
@@ -233,35 +235,41 @@
   <!-- RSVP -->
   <section class="rsvp-section" id="rsvp">
     <h2 class="section-title fade-in">RSVP</h2>
-    <p class="section-subtitle fade-in">Please respond by March 31, 2026</p>
-    
-    <form class="rsvp-form fade-in" name="rsvp" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="rsvp">
+    <p class="section-subtitle fade-in">Please respond by April 30, 2026</p>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <form class="rsvp-form fade-in" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLScn2urUrGfiOU7IR4zDXmuGMRz6x7IHL95IGbYe1T4bHPPgrw/formResponse" target="hidden_iframe" onsubmit="showThankYou()">
       <div class="form-group">
-        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="text" name="entry.1498135098" placeholder="Full Name(s) of Guest(s)" required>
       </div>
       <div class="form-group">
-        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="email" name="entry.365874414" placeholder="Email Address" required>
       </div>
       <div class="form-group">
-        <select name="attending" required>
+        <select name="entry.877086558" required>
           <option value="">Will you be attending?</option>
-          <option value="yes">Joyfully Accept</option>
-          <option value="no">Regretfully Decline</option>
+          <option value="Yes">Joyfully Accept</option>
+          <option value="No">Regretfully Decline</option>
         </select>
       </div>
       <div class="form-group">
-        <select name="guests">
+        <select name="entry.572334989">
           <option value="">Number of Guests</option>
           <option value="1">1 Guest</option>
           <option value="2">2 Guests</option>
         </select>
       </div>
       <div class="form-group">
-        <textarea name="message" rows="3" placeholder="Dietary restrictions or song requests..."></textarea>
+        <textarea name="entry.1424661284" rows="3" placeholder="Dietary restrictions or song requests..."></textarea>
+      </div>
+      <div class="form-group">
+        <textarea name="entry.2606285" rows="3" placeholder="Comments or questions..."></textarea>
       </div>
       <button type="submit" class="submit-btn">Send RSVP</button>
     </form>
+    <div id="thank-you" style="display:none; text-align:center;">
+      <p style="color: var(--taupe);">Thank you! We can't wait to celebrate with you.</p>
+    </div>
   </section>
 
   <!-- Footer -->
