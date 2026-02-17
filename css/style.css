@@ -11,19 +11,16 @@
 
 :root {
   --off-white: rgb(250,250,250);
-  #--warm-white: #FFFFFF;
-  #--warm-white: #f5f4ef;
-  #--warm-white: #ece8df;
-  --warm-white: var(--off-white);
+  --warm-white: #f5f4ef;
   --charcoal: #2C2C2C;
   --soft-black: #2f2e2e;
   --softer-black: #5a5858;
   --taupe: #8B8178;
   --gold: #C9A961;
-  #--light-gold:f8f5ec;
   --light-gold:f2ead9;
   --blush: #E8DDD4;
   --sage: #9CAF96;
+  --major-border-color: var(--off-white);
 }
 
 @font-face {
@@ -93,10 +90,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  #background: rgba(253, 251, 247, 0.95);
   background: var(--light-gold);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(139, 129, 120, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -106,7 +101,6 @@ nav.scrolled {
 }
 
 nav a {
-  # font-family: 'Montserrat', sans-serif;
   font-family: 'Didot Italic';
   font-size: 0.7rem;
   font-weight: 400;
@@ -150,7 +144,9 @@ nav a:hover {
   text-align: center;
   padding: 8rem 2rem 2rem;
   position: relative;
-  background: linear-gradient(180deg, var(--off-white) 0%, var(--warm-white) 25%, var(--off-white) 100%);
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-image: linear-gradient(to bottom, var(--major-border-color), var(--off-white)) 1;
 }
 
 .hero::before {
@@ -182,12 +178,13 @@ nav a:hover {
   font-size: 1.5vw;
   font-family: 'Didot Italic';
   color: var(--taupe);
-  letter-spacing: 1em
+  letter-spacing: .5em;
+  opacity: 0;
+  animation: fadeInUp 1s ease 2s forwards;
 }
 
 .couple-names {
   font-family: 'Brand', cursive;
-  #font-size: 118px;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 300;
   color: var(--soft-black);
@@ -228,7 +225,6 @@ nav a:hover {
   font-size: 1.2vw;
   font-style: italic;
   color: var(--charcoal);
-  margin-bottom: 1rem;
   opacity: 0;
   animation: fadeInUp 1s ease 0.9s forwards;
 }
@@ -238,7 +234,7 @@ nav a:hover {
    ============================================ */
 .countdown {
   display: flex;
-  gap: 2.5rem;
+  gap: 2.5vw;
   margin-bottom: 0rem;
   opacity: 0;
   animation: fadeInUp 1s ease 1.1s forwards;
@@ -250,7 +246,7 @@ nav a:hover {
 
 .countdown-number {
   font-family: 'Brand', serif;
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: 300;
   color: var(--soft-black);
   line-height: 1;
@@ -258,8 +254,8 @@ nav a:hover {
 
 .countdown-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.6vw;
+  letter-spacing: 0.2vw;
   text-transform: uppercase;
   color: var(--taupe);
   margin-top: 0.5rem;
@@ -281,7 +277,7 @@ nav a:hover {
 .hero-photo {
   width: 100%;
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 10vw;
   position: relative;
   opacity: 0;
   animation: fadeInUp 1.2s ease 1s forwards;
@@ -295,7 +291,7 @@ nav a:hover {
 }
 
 .hero-photo:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(50%);
 }
 
 .photo-frame {
@@ -305,6 +301,7 @@ nav a:hover {
   right: -15px;
   bottom: -15px;
   border: 1px solid var(--gold);
+
   pointer-events: none;
   opacity: 0.5;
 }
@@ -314,7 +311,6 @@ nav a:hover {
    ============================================ */
 section {
   padding: 6vw 20vw;
-  #max-width: 1000px;
   margin: 0 auto;
   margin-left: 15vw;
   margin-right: 15vw;
@@ -383,6 +379,7 @@ section {
 /* ============================================
    WEDDING DETAILS
    ============================================ */
+
 .details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -393,8 +390,9 @@ section {
 .detail-card {
   padding: 3rem 2rem;
   background: var(--warm-white);
-  border: 1px solid rgba(139, 129, 120, 0.1);
+  border: 1px solid var(--major-border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 30vw;
 }
 
 .detail-card:hover {
@@ -608,7 +606,7 @@ footer {
   text-align: center;
   padding: 4rem 2rem;
   background: var(--off-white);
-  border-top: 1px solid rgba(139, 129, 120, 0.1);
+  border-top: 1px solid var(--major-border-color);
 }
 
 .footer-monogram {
@@ -693,14 +691,6 @@ footer {
 
   .monogram {
     font-size: 3.5rem;
-  }
-
-  .countdown {
-    gap: 1.5rem;
-  }
-
-  .countdown-number {
-    font-size: 2rem;
   }
 
   .story-content {
