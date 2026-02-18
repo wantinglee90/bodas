@@ -282,7 +282,7 @@ nav.light-text a:hover {
   height: 1px;
   width: 10em;
   background: var(--gold);
-  margin: 2vw;
+  margin: calc(2vh + 1vw);
   opacity: 0;
   animation: expandLine 1s ease 1.7s forwards;
 }
@@ -332,7 +332,7 @@ nav.light-text a:hover {
    HERO PHOTO
    ============================================ */
 .hero-photo {
-  width: 90%;
+  width: 90 %;
   max-width: 1000px;
   margin: 10vw;
   position: relative;
