@@ -85,30 +85,30 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.5rem 3rem;
+  padding: 1.5vw 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 3vw;
   background: var(--light-gold);
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
 }
 
 nav.scrolled {
-  padding: 1rem 3rem;
+  padding: 1vw 3vw;
   box-shadow: 0 2px 20px rgba(0,0,0,0.05);
 }
 
 nav a {
   font-family: 'Didot Italic';
-  font-size: 0.7rem;
+  font-size: 1vw;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2vw;
   text-transform: uppercase;
   color: var(--charcoal);
   text-decoration: none;
-  padding: 0.5rem 0;
+  padding: 0.5vw 0;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -136,13 +136,13 @@ nav a:hover {
    HERO SECTION
    ============================================ */
 .hero {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 8rem 2rem 2rem;
+  padding: 6vw 5vw 5vw ;
   position: relative;
   border-left: 2px solid;
   border-right: 2px solid;
@@ -181,6 +181,7 @@ nav a:hover {
   letter-spacing: .5em;
   opacity: 0;
   animation: fadeInUp 1s ease 2s forwards;
+  margin: .25vw;
 }
 
 .couple-names {
@@ -195,7 +196,7 @@ nav a:hover {
 
 #couple-names-header {
   margin-top:4vw;
-  font-size: 13vw;
+  font-size: 12vw;
   line-height: .8em;
   letter-spacing: -0.05em;
   white-space: nowrap;
@@ -246,7 +247,7 @@ nav a:hover {
 
 .countdown-number {
   font-family: 'Brand', serif;
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 300;
   color: var(--soft-black);
   line-height: 1;
@@ -675,19 +676,6 @@ footer {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 768px) {
-  nav {
-    padding: 1rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  nav a {
-    font-size: 0.6rem;
-  }
-
-  .hero {
-    padding: 6vw 1.5vw 3vw;
-  }
 
   .monogram {
     font-size: 3.5rem;
