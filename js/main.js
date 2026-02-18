@@ -89,6 +89,36 @@ function initNavbarScroll() {
   });
 }
 
+// /* ============================================
+//    NAVBAR LIGHTEN OVER DARK AREAS
+//    ============================================ */
+
+// const navbar = document.getElementById('navbar');
+
+// const darkSections = document.querySelectorAll('#coming-soon, .rsvp-section');
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       navbar.classList.add('light-text');
+//     } else {
+//       // Only remove if no other dark section is intersecting
+//       const anyDarkVisible = [...darkSections].some(section => {
+//         const rect = section.getBoundingClientRect();
+//         return rect.top <= 80 && rect.bottom >= 0; // 80px = approx nav height
+//       });
+//       if (!anyDarkVisible) {
+//         navbar.classList.remove('light-text');
+//       }
+//     }
+//   });
+// }, {
+//   threshold: 0,
+//   rootMargin: '-0px 0px -95% 0px' // triggers when section enters top ~5% of viewport (where nav is)
+// });
+
+// darkSections.forEach(section => observer.observe(section));
+
 /* ============================================
    SMOOTH SCROLL FOR NAV LINKS
    ============================================ */
@@ -133,15 +163,33 @@ function initSmoothScroll() {
    INITIALIZE ON DOM LOAD
    ============================================ */
 document.addEventListener('DOMContentLoaded', function() {
-  // Start countdown
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // Initialize all features
   initScrollAnimations();
   initNavbarScroll();
   initSmoothScroll();
-  initFormHandling();
+  //initFormHandling(); <-- remove this
+
+  // Navbar dark section detection
+  const navbar = document.getElementById('navbar');
+  const darkSections = document.querySelectorAll('.dark-section');
+
+  function updateNavColor() {
+    const navBottom = navbar.getBoundingClientRect().bottom;
+    const isDark = [...darkSections].some(section => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= navBottom && rect.bottom >= 0;
+    });
+    navbar.classList.toggle('light-text', isDark);
+  }
+
+  window.addEventListener('scroll', updateNavColor);
+  updateNavColor(); // run once on load
+
 
   console.log('Wedding website initialized ✨');
 });
+
+
+

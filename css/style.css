@@ -102,7 +102,7 @@ nav.scrolled {
 
 nav a {
   font-family: 'Didot Italic';
-  font-size: 1vw;
+  font-size: calc(1vh + 0.5vw);
   font-weight: 400;
   letter-spacing: 0.2vw;
   text-transform: uppercase;
@@ -132,17 +132,31 @@ nav a:hover {
   color: var(--gold);
 }
 
+nav.light-text {
+  color: var(--off-white);
+}
+
+nav.light-text a {
+  color: var(--off-white);
+}
+
+nav.light-text a:hover {
+  color: var(--gold);
+}
+
+
 /* ============================================
    HERO SECTION
    ============================================ */
 .hero {
-  /*min-height: 100vh;*/
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 6vw 5vw 5vw ;
+  padding-left: 0vw;
+  padding-right: 0vw ;
   position: relative;
   border-left: 2px solid;
   border-right: 2px solid;
@@ -162,20 +176,17 @@ nav a:hover {
   pointer-events: none;
 }
 
-.monogram {
-  font-family: 'Brand', cursive;
-  font-size: 5rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--taupe);
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeInUp 1s ease 0.3s forwards;
+/* ============================================
+   HOME SECTION
+   ============================================ */
+#home {
+  min-height: 100vh;
+  padding-top: calc(8vw - 2vh);
 }
 
 
 .tag-line {
-  font-size: 1.5vw;
+  font-size: calc(.5vw + 1.25vh);
   font-family: 'Didot Italic';
   color: var(--taupe);
   letter-spacing: .5em;
@@ -194,13 +205,17 @@ nav a:hover {
   animation: fadeInUp 1s ease 0.5s forwards;
 }
 
+
+
 #couple-names-header {
   margin-top:4vw;
-  font-size: 12vw;
+  font-size: calc(12vw + 2vh);
   line-height: .8em;
   letter-spacing: -0.05em;
   white-space: nowrap;
 }
+
+
 
 .couple-names .ampersand {
   
@@ -211,7 +226,7 @@ nav a:hover {
 
 .wedding-date {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2vw;
+  font-size: calc(.5vw + 1vh);
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -223,7 +238,7 @@ nav a:hover {
 
 .wedding-location {
   font-family: 'Brand', cursive;
-  font-size: 1.2vw;
+  font-size: calc(.5vw + 1vh);
   font-style: italic;
   color: var(--charcoal);
   opacity: 0;
@@ -247,7 +262,7 @@ nav a:hover {
 
 .countdown-number {
   font-family: 'Brand', serif;
-  font-size: 3vw;
+  font-size: calc(1vw + 2vh);
   font-weight: 300;
   color: var(--soft-black);
   line-height: 1;
@@ -255,7 +270,7 @@ nav a:hover {
 
 .countdown-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.6vw;
+  font-size: calc(.3vw + .7vh);
   letter-spacing: 0.2vw;
   text-transform: uppercase;
   color: var(--taupe);
@@ -273,10 +288,51 @@ nav a:hover {
 }
 
 /* ============================================
+   COMING SOON
+   ============================================ */
+#coming-soon {
+  background-color:var(--soft-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#coming-soon-text {
+  font-family: 'Brand', cursive;
+  font-size: 8vw;
+  font-weight: 300;
+  color: var(--off-white);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  margin-top:4vw;
+  line-height: .8em;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+#coming-soon-details {
+  font-family: 'Montserrat', sans-serif;
+  font-size: calc(.5vw + 1vh);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+/* ============================================
    HERO PHOTO
    ============================================ */
 .hero-photo {
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
   margin: 10vw;
   position: relative;
@@ -313,8 +369,7 @@ nav a:hover {
 section {
   padding: 6vw 20vw;
   margin: 0 auto;
-  margin-left: 15vw;
-  margin-right: 15vw;
+  
 }
 
 .section-title {
@@ -499,6 +554,7 @@ section {
   padding: 6rem 2rem;
   text-align: center;
   max-width: none;
+  min-height: 90vh;
 }
 
 .rsvp-section .section-title {

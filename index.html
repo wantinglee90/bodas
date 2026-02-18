@@ -15,6 +15,7 @@
 </head>
 <body>
   <!-- Navigation -->
+  <script>/*
   <nav id="navbar">
     <a href="#home">Home</a>
 <!--    <a href="#story">Our Story</a>-->
@@ -24,10 +25,22 @@
 <!--    <a href="#registry">Registry</a>-->
     <a href="#rsvp">RSVP</a>
   </nav>
+  */</script>
+
+    <nav id="navbar">
+    <a href="#rsvp">Early RSVP</a>
+    |
+    <a href="#coming-soon">Our Story</a>
+    |
+    <a href="#coming-soon">Details</a>
+    <!--<a href="#coming-soon">Schedule</a>-->
+    <!--<a href="#coming-soon">Travel</a>-->
+    <!--<a href="#coming-soon">Registry</a>-->
+    
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-<!--    <div class="monogram">T&J</div>-->
     <span class="tag-line">#OFFICIALLEEMICKLOS</span>
     <h1 class="couple-names" id="couple-names-header" >
       Wan Ting <span class="ampersand">&</span><br/>Jonathan
@@ -57,9 +70,17 @@
     </div>
 
     <div class="decorative-line"></div>
+  </section>
 
+  <section class="dark-section" id="coming-soon">
+      <h1 id="coming-soon-text">Details Coming Soon...</h1>
+      <div id="coming-soon-details">...But always feel free to reach out if you have any questions!</h1>
+  </section>
+
+
+
+  <section class="hero">
     <div class="hero-photo">
-      <!-- Replace with your photo -->
       <img src="images/1acaafa2-a20a-4136-b789-cf5ff760eb93.jpg" alt="Wan Ting and Jonathan">
       <div class="photo-frame"></div>
     </div>
@@ -84,7 +105,7 @@
 <!--  </section>-->
 
   <!-- Wedding Details -->
-  <section id="details">
+ <!--  <section id="details">
     <h2 class="section-title fade-in">Wedding Details</h2>
     <p class="section-subtitle fade-in">Join Us for Our Celebration</p>
     
@@ -128,10 +149,10 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Schedule -->
-  <section id="schedule">
+  <!-- <section id="schedule">
     <h2 class="section-title fade-in">Schedule of Events</h2>
     <p class="section-subtitle fade-in">Timeline for the Day</p>
     
@@ -177,10 +198,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Travel -->
-  <section id="travel">
+  <!-- <section id="travel">
     <h2 class="section-title fade-in">Travel</h2>
     <p class="section-subtitle fade-in">Getting to CDMX</p>
     
@@ -211,11 +232,11 @@
           We suggest using <a href="https://www.uber.com/us/en/download/" target="_blank" rel="noopener noreferrer">Uber</a> or <a href="https://web.didiglobal.com/" target="_blank" rel="noopener noreferrer">Didi</a> app to get around.<br>
           Rates on Didi are usually cheaper than Uber.<br>
           Please allow adequate time for travel as traffic can be unpredictable.
-<!--          ❋-->
+
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Registry -->
 <!--  <section id="registry">-->
@@ -236,9 +257,9 @@
 <!--  </section>-->
 
   <!-- RSVP -->
-  <section class="rsvp-section" id="rsvp">
-    <h2 class="section-title fade-in">RSVP</h2>
-    <p class="section-subtitle fade-in">Please respond by April 30, 2026</p>
+  <section class="rsvp-section dark-section" id="rsvp">
+    <h2 class="section-title fade-in">Early RSVP</h2>
+    <!-- <p class="section-subtitle fade-in">Please respond by April 30, 2026</p> -->
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
     <form class="rsvp-form fade-in" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLScn2urUrGfiOU7IR4zDXmuGMRz6x7IHL95IGbYe1T4bHPPgrw/formResponse" target="hidden_iframe" onsubmit="showThankYou()">
@@ -250,8 +271,9 @@
       </div>
       <div class="form-group">
         <select name="entry.877086558" required>
-          <option value="">Will you be attending?</option>
+          <option value="">Do you know yet if you will be attending?</option>
           <option value="Yes">Joyfully Accept</option>
+          <option value="Maybe">Maybe</option>
           <option value="No">Regretfully Decline</option>
         </select>
       </div>
@@ -266,9 +288,9 @@
         <textarea name="entry.1424661284" rows="3" placeholder="Dietary restrictions or song requests..."></textarea>
       </div>
       <div class="form-group">
-        <textarea name="entry.2606285" rows="3" placeholder="Comments or questions..."></textarea>
+        <textarea name="entry.809552943" rows="3" placeholder="Please provide your address for a formal invite..."></textarea>
       </div>
-      <button type="submit" class="submit-btn">Send RSVP</button>
+      <button type="submit" class="submit-btn">Send Early RSVP</button>
     </form>
     <div id="thank-you" style="display:none; text-align:center;">
       <p style="color: var(--taupe);">Thank you! We can't wait to celebrate with you.</p>
@@ -277,10 +299,9 @@
 
   <!-- Footer -->
   <footer>
-<!--    <div class="footer-monogram">T&J</div>-->
-    <p class="footer-text">We can't wait to celebrate with you</p>
-    <p class="footer-hashtag">#WanTingJonathan</p>
-    <p class="detail-info"> This website was vibe coded by Wan Ting & Jonathan</p>
+    <p class="footer-text">We can't wait to celebrate with you!</p>
+    <p class="footer-hashtag">#OFFICIALLEEMICKLOS</p>
+    <p class="detail-info">This website was vibe coded (with <a class="detail-info" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">love and care</a>) by Wan Ting & Jonathan</p>
   </footer>
 
   <!-- JavaScript -->
