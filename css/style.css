@@ -287,11 +287,14 @@ nav.light-text a:hover {
   animation: expandLine 1s ease 1.7s forwards;
 }
 
+.dark-section {
+  background-color:var(--soft-black);
+  color: var(--off-white);
+}
 /* ============================================
    COMING SOON
    ============================================ */
 #coming-soon {
-  background-color:var(--soft-black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -304,7 +307,6 @@ nav.light-text a:hover {
   font-family: 'Brand', cursive;
   font-size: 8vw;
   font-weight: 300;
-  color: var(--off-white);
   margin-bottom: 1.5rem;
   opacity: 0;
   margin-top:4vw;
@@ -549,12 +551,11 @@ section {
    RSVP SECTION
    ============================================ */
 .rsvp-section {
-  background: var(--soft-black);
-  color: var(--off-white);
   padding: 6rem 2rem;
   text-align: center;
   max-width: none;
   min-height: 90vh;
+  color: var(--off-white);
 }
 
 .rsvp-section .section-title {
@@ -577,13 +578,13 @@ section {
 .form-group input,
 .form-group select,
 .form-group textarea {
+  color: var(--off-white);
   width: 100%;
   padding: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   background: transparent;
   border: 1px solid rgba(253, 251, 247, 0.2);
-  color: var(--off-white);
   transition: border-color 0.3s ease;
 }
 
@@ -666,14 +667,6 @@ footer {
   border-top: 1px solid var(--major-border-color);
 }
 
-.footer-monogram {
-  ffont-family: 'Lavishly Yours', cursive;
-  font-size: 3rem;
-  font-style: italic;
-  color: var(--taupe);
-  margin-bottom: 1rem;
-}
-
 .footer-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
@@ -731,11 +724,7 @@ footer {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
-@media (max-width: 768px) {
-
-  .monogram {
-    font-size: 3.5rem;
-  }
+/*@media (max-width: 768px) {
 
   .story-content {
     grid-template-columns: 1fr;
@@ -764,4 +753,4 @@ footer {
   .timeline-content {
     padding: 0;
   }
-}
+}*/
