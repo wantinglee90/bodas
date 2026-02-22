@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Didot', serif;
   background-color: var(--off-white);
   color: var(--charcoal);
   line-height: 1.6;
@@ -196,11 +196,11 @@ nav.light-text a:hover {
 }
 
 .couple-names {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 300;
   color: var(--soft-black);
-  margin-bottom: 1.5rem;
+  margin-bottom: .5vw;
   opacity: 0;
   animation: fadeInUp 1s ease 0.5s forwards;
 }
@@ -225,21 +225,31 @@ nav.light-text a:hover {
 }
 
 .wedding-date {
-  font-family: 'Montserrat', sans-serif;
-  font-size: calc(.5vw + 1vh);
-  font-weight: 400;
-  letter-spacing: 0.3em;
+  font-family: 'Didot', serif;
+  font-size: calc(.75vw + 1vh);
+  /*font-weight: 400;*/
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--taupe);
-  margin-bottom: 0.5rem;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
   opacity: 0;
   animation: fadeInUp 1s ease 0.7s forwards;
 }
 
+.wedding-venue {
+  font-family: 'Brand', serif;
+  font-size: calc(1vw + 2vh);
+  font-weight: 300;
+  color: var(--soft-black);
+  line-height: 1;
+  margin-top: .75vw;
+}
+
 .wedding-location {
-  font-family: 'Brand', cursive;
-  font-size: calc(.5vw + 1vh);
-  font-style: italic;
+  font-family: 'Brand', serif;
+  font-size: calc(.75vw + 1vh);
+  /*font-style: italic;*/
   color: var(--charcoal);
   opacity: 0;
   animation: fadeInUp 1s ease 0.9s forwards;
@@ -287,6 +297,15 @@ nav.light-text a:hover {
   animation: expandLine 1s ease 1.7s forwards;
 }
 
+.page-break-line {
+  height: 1px;
+  width: 80vw;
+  background: var(--gold);
+  margin: calc(2vh + 1vw);
+  /*opacity: 0;*/
+  /*animation: expandLine 1s ease 1.7s forwards;*/
+}
+
 .dark-section {
   background-color:var(--soft-black);
   color: var(--off-white);
@@ -303,8 +322,17 @@ nav.light-text a:hover {
   text-align: center;
 }
 
+#coming-soon {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 #coming-soon-text {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: 8vw;
   font-weight: 300;
   margin-bottom: 1.5rem;
@@ -312,7 +340,8 @@ nav.light-text a:hover {
   margin-top:4vw;
   line-height: .8em;
   letter-spacing: -0.05em;
-  white-space: nowrap;
+  text-align: center;
+  /*white-space: nowrap;*/
   animation: fadeInUp 1s ease 0.5s forwards;
 }
 
@@ -375,8 +404,8 @@ section {
 }
 
 .section-title {
-  font-family: 'Brand', cursive;
-  font-size: 2.5rem;
+  font-family: 'Brand', serif;
+  font-size: 3rem;
   font-weight: 300;
   text-align: center;
   color: var(--soft-black);
@@ -385,7 +414,7 @@ section {
 
 .section-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-align: center;
@@ -396,7 +425,7 @@ section {
 /* ============================================
    OUR STORY
    ============================================ */
-.story-content {
+/*.story-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -404,7 +433,7 @@ section {
 }
 
 .story-text {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: 1.2rem;
   line-height: 1.9;
   color: var(--charcoal);
@@ -412,6 +441,43 @@ section {
 
 .story-text p {
   margin-bottom: 1.5rem;
+}*/
+
+#story {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#story-title {
+  font-family: 'Brand', serif;
+  font-size: 8vw;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  margin-top:4vw;
+  line-height: .8em;
+  letter-spacing: -0.05em;
+  text-align: center;
+  /*white-space: nowrap;*/
+  animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+#story-details {
+  font-family: 'Montserrat', sans-serif;
+  font-size: calc(.5vw + 1vh);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  animation: fadeInUp 1s ease 0.7s forwards;
 }
 
 .story-image {
@@ -465,16 +531,18 @@ section {
 }
 
 .detail-title {
-  font-family: 'Brand', cursive;
-  font-size: 1.5rem;
+  font-family: 'Brand', serif;
+  font-size: 2.75rem;
   font-weight: 400;
   margin-bottom: 1rem;
   color: var(--soft-black);
 }
 
 .detail-info {
+  /*font-family: 'Didot', serif;*/
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  letter-spacing: .1vw;
+  font-size: .85rem; 
   color: var(--taupe);
   line-height: 1.8;
 }
@@ -483,6 +551,7 @@ section {
   display: block;
   color: var(--charcoal);
   margin-top: 1rem;
+  font-size: .95rem; 
 }
 
 /* ============================================
@@ -536,7 +605,7 @@ section {
 }
 
 .timeline-title {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: 1.3rem;
   color: var(--soft-black);
 }
@@ -652,7 +721,7 @@ section {
 }
 
 .registry-name {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: 1.3rem;
   color: var(--soft-black);
 }
@@ -676,7 +745,7 @@ footer {
 }
 
 .footer-hashtag {
-  font-family: 'Brand', cursive;
+  font-family: 'Brand', serif;
   font-size: 1.2rem;
   font-style: italic;
   color: var(--gold);
@@ -724,7 +793,7 @@ footer {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
 
   .story-content {
     grid-template-columns: 1fr;
@@ -733,6 +802,15 @@ footer {
 
   .details-grid {
     grid-template-columns: 1fr;
+
+  }
+
+  .detail-title { 
+    font-size: 6vw;
+  }
+
+  .detail-card { 
+    width: 60vw;
   }
 
   .timeline-item {
@@ -753,4 +831,4 @@ footer {
   .timeline-content {
     padding: 0;
   }
-}*/
+}
