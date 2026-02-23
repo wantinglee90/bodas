@@ -365,7 +365,9 @@ nav.light-text a:hover {
 .hero-photo {
   width: 90 %;
   max-width: 1000px;
-  margin: 10vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top:3vh;
   position: relative;
   opacity: 0;
   animation: fadeInUp 1.2s ease 1s forwards;
@@ -411,6 +413,7 @@ section {
   color: var(--soft-black);
   margin-bottom: 1rem;
 }
+
 
 .section-subtitle {
   font-family: 'Montserrat', sans-serif;

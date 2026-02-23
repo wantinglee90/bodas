@@ -179,7 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navBottom = navbar.getBoundingClientRect().bottom;
     const isDark = [...darkSections].some(section => {
       const rect = section.getBoundingClientRect();
-      return rect.top <= navBottom && rect.bottom >= 0;
+      // 20px buffer in case anchor scrolling is too close
+      return rect.top <= navBottom && rect.bottom >= 20;
     });
     navbar.classList.toggle('light-text', isDark);
   }
