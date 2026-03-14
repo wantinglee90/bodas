@@ -163,23 +163,6 @@ function initSmoothScroll() {
    INITIALIZE ON DOM LOAD
    ============================================ */
 document.addEventListener('DOMContentLoaded', function() {
-
-  // Set --nav-h CSS variable from actual nav height, used by spacer + hero
-  function setNavHeight() {
-    const nav = document.getElementById('navbar');
-    if (nav) {
-      const h = nav.getBoundingClientRect().height;
-      document.documentElement.style.setProperty('--nav-h', h + 'px');
-    }
-  }
-  setNavHeight();
-  // Use ResizeObserver on the nav itself for instant accurate updates
-  const navEl = document.getElementById('navbar');
-  if (navEl && window.ResizeObserver) {
-    new ResizeObserver(setNavHeight).observe(navEl);
-  }
-  window.addEventListener('resize', setNavHeight);
-
   updateCountdown();
   setInterval(updateCountdown, 1000);
 

@@ -41,10 +41,10 @@
   <line x1="540.0" y1="178" x2="540.0" y2="234" stroke="url(#vg1)" stroke-width="0.5"/>
 
   <!-- CENTER BLOCK — dead center of card -->
-  <text x="749.6" y="411"
+  <text x="786" y="411"
         font-family="Brand, serif" font-size="148"
         fill="#1a1916" letter-spacing="-6" text-anchor="end">Wan Ting</text>
-  <text x="749.6" y="411"
+  <text x="786" y="411"
         font-family="Brand, serif" font-size="148"
         fill="#c9a84c" letter-spacing="-6" text-anchor="start">&amp;</text>
 
@@ -52,21 +52,21 @@
         font-family="Brand, serif" font-size="148"
         fill="#1a1916" letter-spacing="-6" text-anchor="middle">Jonathan</text>
 
-  <line x1="450.0" y1="593" x2="630.0" y2="593" stroke="url(#hg1)" stroke-width="1"/>
+  <line x1="450.0" y1="645" x2="630.0" y2="645" stroke="url(#hg1)" stroke-width="1"/>
 
-  <text x="540.0" y="637"
+  <text x="540.0" y="697"
         font-family="'Cormorant SC', serif" font-weight="400" font-size="22"
         fill="#5e5a52" letter-spacing="8" text-anchor="middle">DECEMBER 12, 2026</text>
 
-  <text x="540.0" y="685"
+  <text x="540.0" y="745"
         font-family="'Cormorant SC', serif" font-weight="500" font-size="22"
         fill="#1a1916" letter-spacing="7" text-anchor="middle">CASINO ESPAÑOL</text>
 
-  <text x="540.0" y="729"
+  <text x="540.0" y="789"
         font-family="Didot, serif" font-style="italic" font-size="20"
         fill="#8a8070" letter-spacing="1" text-anchor="middle">Ciudad de México, México</text>
 
-  <line x1="450.0" y1="775" x2="630.0" y2="775" stroke="url(#hg2)" stroke-width="1"/>
+  <line x1="450.0" y1="827" x2="630.0" y2="827" stroke="url(#hg2)" stroke-width="1"/>
 
   <!-- Bottom anchor: website + hashtag -->
   <a href="https://www.officialleemicklos.com" target="_blank">
