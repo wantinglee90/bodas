@@ -11,8 +11,8 @@
 
 :root {
   --nav-h: 87px; /* fallback, overridden by JS */
-  --off-white: rgb(250,250,250);
-  --warm-white: #f5f4ef;
+  --off-white: #f4f1eb;
+  --warm-white: #f4f1eb;
   --charcoal: #2C2C2C;
   --soft-black: #2f2e2e;
   --softer-black: #5a5858;
