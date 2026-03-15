@@ -530,6 +530,39 @@ section {
    WEDDING DETAILS
    ============================================ */
 
+/* --- Single consolidated card (current) --- */
+.details-single {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--warm-white);
+  border: 1px solid var(--gold-border);
+  padding: 3rem 3.5rem;
+  text-align: center;
+}
+
+.detail-block {
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-block:first-child {
+  padding-top: 0;
+}
+
+.detail-block:last-child {
+  padding-bottom: 0;
+}
+
+.detail-block-divider {
+  width: 40%;
+  height: 1px;
+  background: var(--gold-border);
+  margin: 0 auto;
+}
+
+/* --- Multi-card grid (uncomment in HTML to activate) --- */
 .details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -558,6 +591,10 @@ section {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--gold);
+}
+
+.detail-icon--lg {
+  font-size: 2.8rem;
 }
 
 .detail-title {
@@ -834,7 +871,10 @@ footer {
 
   .details-grid {
     grid-template-columns: 1fr;
+  }
 
+  .details-single {
+    padding: 2rem 1.5rem;
   }
 
   .detail-title { 
