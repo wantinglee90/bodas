@@ -864,6 +864,10 @@ footer {
    ============================================ */
 @media (max-width: 768px) {
 
+  section {
+    padding: 6vw 12vw;
+  }
+
   .story-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -875,14 +879,16 @@ footer {
 
   .details-single {
     padding: 2rem 1.5rem;
+    max-width: 95vw;
+    margin-bottom: 3vh;
   }
 
   .detail-title { 
     font-size: 6vw;
   }
 
-  .detail-card { 
-    width: 60vw;
+  .detail-card {
+    width: 95vw;
   }
 
   .timeline-item {
