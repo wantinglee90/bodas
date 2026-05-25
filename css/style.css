@@ -21,6 +21,7 @@
   --light-gold: #f2ead9;
   --blush: #E8DDD4;
   --sage: #9CAF96;
+  --light-gold: #f7f3ec;
   --gold-border: rgba(201,169,97,0.55);
   --cream-border: rgba(244,241,235,0.22);
   --major-border-color: var(--gold-border);
@@ -685,6 +686,67 @@ section {
 }
 
 /* ============================================
+   TRAVEL & STAY
+   ============================================ */
+
+/* Override the default section frame for #travel only */
+section#travel {
+  background-color: var(--light-gold);
+  box-shadow: none;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+/* The Roman numeral acts as a section opener */
+.section-numeral {
+  display: block;
+  font-family: 'Didot Italic', Georgia, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-align: center;
+  margin: 0 0 2.5rem;
+  opacity: 0.7;
+}
+
+/* Small hairline beneath the numeral */
+.section-numeral::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+  opacity: 0.6;
+}
+
+/* For Travel & Stay, drop the boxed card — let blocks breathe on the cream */
+section#travel .details-single {
+  background: transparent;
+  border: none;
+  padding: 0;
+  max-width: 600px;
+}
+
+/* Slightly more vertical space between blocks in the open layout */
+section#travel .detail-block {
+  padding: 3.5rem 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section#travel {
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+  .section-numeral {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ============================================
    RSVP SECTION
    ============================================ */
 .rsvp-section {
@@ -762,6 +824,56 @@ section {
 .submit-btn:hover {
   background: var(--off-white);
   color: var(--soft-black);
+}
+
+/* ============================================
+   SECTION SPLIT — side-by-side panels (Nora-style)
+   ============================================ */
+section#travel {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+section#travel .section-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section#travel .split-panel {
+  background-color: var(--warm-white);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+section#travel .split-inner {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+section#travel .split-inner .detail-title {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  section#travel .section-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 95vw;
+  }
+  section#travel .split-panel {
+    min-height: auto;
+  }
+  section#travel .split-inner {
+    padding: 2.5rem 2rem;
+  }
 }
 
 /* ============================================
