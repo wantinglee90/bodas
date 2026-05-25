@@ -21,7 +21,6 @@
   --light-gold: #f2ead9;
   --blush: #E8DDD4;
   --sage: #9CAF96;
-  --light-gold: #f7f3ec;
   --gold-border: rgba(201,169,97,0.55);
   --cream-border: rgba(244,241,235,0.22);
   --major-border-color: var(--gold-border);
@@ -686,15 +685,15 @@ section {
 }
 
 /* ============================================
-   TRAVEL & STAY
+   TRAVEL & STAY - side by side panels
    ============================================ */
 
-/* Override the default section frame for #travel only */
-section#travel {
-  background-color: var(--light-gold);
-  box-shadow: none;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+section#travel .section-title {
+  color: var(--off-white);
+}
+
+section#travel .section-subtitle {
+  color: var(--taupe);
 }
 
 /* The Roman numeral acts as a section opener */
@@ -746,24 +745,111 @@ section#travel .detail-block {
   }
 }
 
+section#travel {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  box-shadow: inset 0 0 0 12px var(--soft-black),
+            inset 0 0 0 13px rgba(201,169,97,0.6),
+            inset 0 0 0 19px var(--soft-black),
+            inset 0 0 0 20px rgba(201,169,97,0.25);
+}
+
+section#travel .section-split {
+  display: grid;
+  grid-template-columns: 465px 465px;
+  gap: min(clamp(2rem, 14vw, 20rem), calc(100% - 930px));
+  justify-content: center;
+  margin: 0 auto;
+}
+
+section#travel .split-panel {
+  background-color: var(--soft-black);
+  /*border: 1px solid var(--gold-border);*/
+  border: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 420px;
+}
+
+/* Gold typography for the dark-on-dark panels */
+section#travel .split-inner {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+section#travel .split-inner .detail-title {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+section#travel .split-inner .detail-icon {
+  color: var(--gold);
+}
+
+section#travel .split-inner .detail-info {
+  color: var(--light-gold);
+}
+
+section#travel .split-inner .detail-info strong {
+  color: var(--gold);
+}
+
+/* Links inside the dark panels */
+section#travel .split-inner a:-webkit-any-link {
+  color: var(--gold);
+}
+
+section#travel .split-inner a:-webkit-any-link:hover {
+  color: var(--off-white);
+}
+
+/* Mid-size screens: flexible columns, tighter gap */
+@media (max-width: 1100px) and (min-width: 769px) {
+  section#travel .section-split {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 4vw, 3rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section#travel .section-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 95vw;
+  }
+  section#travel .split-panel {
+    min-height: auto;
+  }
+  section#travel .split-inner {
+    padding: 2.5rem 2rem;
+  }
+}
+
 /* ============================================
-   RSVP SECTION
+   RSVP SECTION — light-gold inversion
    ============================================ */
 .rsvp-section {
+  background-color: var(--off-white);
+  color: var(--soft-black);
   padding: 6rem 2rem;
-  box-shadow: inset 0 0 0 12px var(--soft-black), inset 0 0 0 13px rgba(201,169,97,0.6), inset 0 0 0 19px var(--soft-black), inset 0 0 0 20px rgba(201,169,97,0.25);
+  box-shadow: inset 0 0 0 12px var(--off-white),
+              inset 0 0 0 13px rgba(201,169,97,0.6),
+              inset 0 0 0 19px var(--off-white),
+              inset 0 0 0 20px rgba(201,169,97,0.25);
   text-align: center;
   max-width: none;
   min-height: 90vh;
-  color: var(--off-white);
 }
 
 .rsvp-section .section-title {
-  color: var(--off-white);
+  color: var(--soft-black);
 }
 
 .rsvp-section .section-subtitle {
-  color: var(--taupe);
+  color: var(--softer-black);
 }
 
 .rsvp-form {
@@ -778,19 +864,20 @@ section#travel .detail-block {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  color: var(--off-white);
+  color: var(--soft-black);
   width: 100%;
   padding: 1rem;
   font-family: 'Jost', sans-serif;
   font-size: 0.85rem;
   background: transparent;
-  border: 1px solid rgba(253, 251, 247, 0.2);
+  border: 1px solid var(--gold-border);     /* ← was invisible */
   transition: border-color 0.3s ease;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--taupe);
+  color: var(--softer-black);
+  opacity: 0.6;
 }
 
 .form-group input:focus,
@@ -805,7 +892,8 @@ section#travel .detail-block {
 }
 
 .form-group select option {
-  background: var(--soft-black);
+  background: var(--off-white);
+  color: var(--soft-black);
 }
 
 .submit-btn {
@@ -814,66 +902,16 @@ section#travel .detail-block {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 1rem 3rem;
-  background: var(--gold);
-  color: var(--soft-black);
+  background: var(--soft-black);
+  color: var(--off-white);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-  background: var(--off-white);
+  background: var(--gold);
   color: var(--soft-black);
-}
-
-/* ============================================
-   SECTION SPLIT — side-by-side panels (Nora-style)
-   ============================================ */
-section#travel {
-  padding-left: 8vw;
-  padding-right: 8vw;
-}
-
-section#travel .section-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-section#travel .split-panel {
-  background-color: var(--warm-white);
-  border: 1px solid var(--gold-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 420px;
-}
-
-section#travel .split-inner {
-  padding: 3rem 2.5rem;
-  text-align: center;
-  max-width: 100%;
-}
-
-section#travel .split-inner .detail-title {
-  font-size: 2rem;
-}
-
-@media (max-width: 768px) {
-  section#travel .section-split {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 95vw;
-  }
-  section#travel .split-panel {
-    min-height: auto;
-  }
-  section#travel .split-inner {
-    padding: 2.5rem 2rem;
-  }
 }
 
 /* ============================================
@@ -914,7 +952,8 @@ footer {
   text-align: center;
   padding: 4rem 2rem;
   background: var(--off-white);
-  box-shadow: inset 0 0 0 12px var(--off-white), inset 0 0 0 13px rgba(201,169,97,0.6), inset 0 0 0 19px var(--off-white), inset 0 0 0 20px rgba(201,169,97,0.25);
+  /*box-shadow: inset 0 0 0 12px var(--off-white), inset 0 0 0 13px rgba(201,169,97,0.6), inset 0 0 0 19px var(--off-white), inset 0 0 0 20px rgba(201,169,97,0.25);*/
+  box-shadow: none;
 }
 
 .footer-text {
