@@ -685,8 +685,18 @@ section {
 }
 
 /* ============================================
-   TRAVEL & STAY - side by side panels
+   TRAVEL & STAY
    ============================================ */
+
+/* Override the default section frame for #travel only */
+section#travel {
+  background-color: var(--soft-black);
+  box-shadow: none;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
 
 section#travel .section-title {
   color: var(--off-white);
@@ -694,6 +704,11 @@ section#travel .section-title {
 
 section#travel .section-subtitle {
   color: var(--taupe);
+}
+
+section#travel .split-panel {
+  background-color: var(--light-gold);
+  border: 1px solid var(--gold-border);
 }
 
 /* The Roman numeral acts as a section opener */
