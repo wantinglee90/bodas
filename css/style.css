@@ -531,6 +531,15 @@ section {
    ============================================ */
 
 /* --- Single consolidated card (current) --- */
+#details img {
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  box-sizing: border-box;
+}
+
 .details-single {
   max-width: 600px;
   margin: 0 auto;
