@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
     <style>
       @font-face {
@@ -12,15 +12,15 @@
       }
     </style>
     <linearGradient id="hg1" x1="450.0" y1="0" x2="630.0" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#c9a84c" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0"/>
       <stop offset="30%"  stop-color="#c9a84c" stop-opacity="1"/>
       <stop offset="70%"  stop-color="#c9a84c" stop-opacity="1"/>
       <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="hg2" x1="450.0" y1="0" x2="630.0" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#c9a84c" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0"/>
       <stop offset="30%"  stop-color="#c9a84c" stop-opacity="1"/>
-      <stop offset="70%"  stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#c9a84c" stop-opacity="1"/>
       <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="vg1" x1="0" y1="178" x2="0" y2="234" gradientUnits="userSpaceOnUse">
@@ -30,21 +30,21 @@
     </linearGradient>
   </defs>
 
-  <rect width="1000" height="1000" fill="#f4f1eb"/>
-  <rect x="32" y="32" width="936" height="936" fill="none" stroke="rgba(186,152,88,0.42)" stroke-width="1"/>
-  <rect x="40" y="40" width="920" height="920" fill="none" stroke="rgba(186,152,88,0.18)" stroke-width="0.5"/>
+  <rect width="1080" height="1080" fill="#f4f1eb"/>
+  <rect x="32" y="32" width="1016" height="1016" fill="none" stroke="rgba(186,152,88,0.42)" stroke-width="1"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="rgba(186,152,88,0.18)" stroke-width="0.5"/>
 
   <!-- Top anchor: SAVE THE DATE + hairline -->
-  <text x="130.0" y="148"
+  <text x="540.0" y="148"
         font-family="'Cormorant SC', serif" font-weight="300" font-size="32"
-        fill="#8a8070" letter-spacing="14" text-anchor="start">SAVE THE DATE</text>
+        fill="#8a8070" letter-spacing="14" text-anchor="middle">SAVE THE DATE</text>
   <line x1="540.0" y1="178" x2="540.0" y2="234" stroke="url(#vg1)" stroke-width="0.5"/>
 
   <!-- CENTER BLOCK — dead center of card -->
-  <text x="120" y="411"
+  <text x="786" y="411"
         font-family="Brand, serif" font-size="148"
-        fill="#1a1916" letter-spacing="-6" text-anchor="start">Wan Ting</text>
-  <text x="130" y="547"
+        fill="#1a1916" letter-spacing="-6" text-anchor="end">Wan Ting</text>
+  <text x="786" y="411"
         font-family="Brand, serif" font-size="148"
         fill="#c9a84c" letter-spacing="-6" text-anchor="start">&amp;</text>
 
@@ -52,21 +52,21 @@
         font-family="Brand, serif" font-size="148"
         fill="#1a1916" letter-spacing="-6" text-anchor="middle">Jonathan</text>
 
-  <line x1="120.0" y1="690" x2="300.0" y2="690" stroke="url(#hg1)" stroke-width="1"/>
+  <line x1="450.0" y1="645" x2="630.0" y2="645" stroke="url(#hg1)" stroke-width="1"/>
 
-  <text x="130.0" y="742"
-        font-family="'Cormorant SC', serif" font-weight="400" font-size="27"
-        fill="#5e5a52" letter-spacing="8" text-anchor="start">APRIL 24, 2027</text>
+  <text x="540.0" y="697"
+        font-family="'Cormorant SC', serif" font-weight="400" font-size="22"
+        fill="#5e5a52" letter-spacing="8" text-anchor="middle">APRIL 24, 2027</text>
 
-  <text x="130.0" y="790"
-        font-family="'Cormorant SC', serif" font-weight="500" font-size="29"
-        fill="#1a1916" letter-spacing="4" text-anchor="start">MONTI at 1-PAVILLION, Singapore</text>
+  <text x="540.0" y="745"
+        font-family="'Cormorant SC', serif" font-weight="500" font-size="24"
+        fill="#1a1916" letter-spacing="4" text-anchor="middle">MONTI at 1-PAVILION, Singapore</text>
 
-  <text x="130.0" y="838"
-        font-family="Didot, serif" font-style="italic" font-size="27"
-        fill="#8a8070" letter-spacing="1" text-anchor="start">Tea Ceremony and Wedding Lunch</text>
+  <text x="540.0" y="793"
+        font-family="Didot, serif" font-style="italic" font-size="21"
+        fill="#8a8070" letter-spacing="1" text-anchor="middle">Tea Ceremony and Lunch Reception</text>
 
-<!--  <line x1="120.0" y1="845" x2="300.0" y2="845" stroke="url(#hg2)" stroke-width="1"/>-->
+  <line x1="450.0" y1="845" x2="630.0" y2="845" stroke="url(#hg2)" stroke-width="1"/>
 
 
 </svg>
