@@ -701,8 +701,8 @@ section {
 section#travel {
   background-color: var(--soft-black);
   box-shadow: none;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
   padding-left: 8vw;
   padding-right: 8vw;
 }
@@ -793,7 +793,8 @@ section#travel .split-panel {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  min-height: 420px;
+  /*min-height: 420px;*/
+  min-height: 0;
 }
 
 /* Gold typography for the dark-on-dark panels */
